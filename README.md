@@ -13,4 +13,5 @@ Aslo, I wanted to upgrade my snake, could you try to do that for me ?
 
 - Make him die when he goes to far right and down. 
 - Make two apples with differents sprite appear. 
+- Finally if you find it fun, try to balance the snake speed between left/right and up/down (I never try to do it)
 
