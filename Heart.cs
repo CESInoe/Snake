@@ -1,6 +1,6 @@
 ﻿namespace Snake
 {
-    class Heart : IRenderable
+    class Heart :
     {
         public Heart(int numberOfRows, int numberOfColumns)
         {

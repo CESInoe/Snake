@@ -1,6 +1,6 @@
 ﻿namespace Snake
 {
-    class Snake : IRenderable
+    class Snake :
     {
         private List<Position> _body;
         private int _growthSpurtsRemaining;

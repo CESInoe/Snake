@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class SnakeGame : IRenderable
+    class SnakeGame :
     {
         private static readonly Position Origin = new Position(0, 0);
 
@@ -23,6 +23,8 @@ namespace Snake
             /*
              * ... Something is missing here 
              */
+
+            // setting current and next direction to right so the snake head to the right first. 
             _currentDirection = DirectionEnum.Right;
             _nextDirection = DirectionEnum.Right;
         }
