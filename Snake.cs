@@ -17,7 +17,7 @@
         }
 
         public bool Dead { get; private set; }
-        public Position Head => _body.First();
+        public Position HeadPosition => _body.First();
         private IEnumerable<Position> Body => _body.Skip(1);
 
         public void Move(DirectionEnum direction)
@@ -29,19 +29,19 @@
             switch (direction)
             {
                 case DirectionEnum.Up:
-                    newHead = Head.DownBy(-1);
+                    newHead = HeadPosition.DownBy(-1);
                     break;
 
                 case DirectionEnum.Left:
-                    newHead = Head.RightBy(-1);
+                    newHead = HeadPosition.RightBy(-1);
                     break;
 
                 case DirectionEnum.Down:
-                    newHead = Head.DownBy(1);
+                    newHead = HeadPosition.DownBy(1);
                     break;
 
                 case DirectionEnum.Right:
-                    newHead = Head.RightBy(1);
+                    newHead = HeadPosition.RightBy(1);
                     break;
 
                 default:
@@ -75,12 +75,12 @@
 
         public void Render()
         {
-            Console.SetCursorPosition(Head.Left, Head.Top);
+            Console.SetCursorPosition(HeadPosition.Left, HeadPosition.Top);
             Console.Write("♦");
 
-            foreach (var position in Body)
+            foreach (var vertebra in Body)
             {
-                Console.SetCursorPosition(position.Left, position.Top);
+                Console.SetCursorPosition(vertebra.Left, vertebra.Top);
                 Console.Write("■");
             }
         }

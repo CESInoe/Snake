@@ -19,10 +19,10 @@ namespace Snake
 
         public SnakeGame()
         {
-            // Init : a snake of size 5, an apple,
-            // the currentDirection and the nexDirection to Right
-            _snake = new Snake(Origin, numberOfRows, numberOfColumns, initialSize: 5);
-            _apple = new Heart(numberOfRows, numberOfColumns);
+            // Init : a snake of size 5, an apple
+            /*
+             * ... Something is missing here 
+             */
             _currentDirection = DirectionEnum.Right;
             _nextDirection = DirectionEnum.Right;
         }
@@ -36,18 +36,24 @@ namespace Snake
             switch (key)
             {
                 case ConsoleKey.Z:
+                case ConsoleKey.UpArrow:
+                case ConsoleKey.W:
                     newDirection = DirectionEnum.Up;
                     break;
 
                 case ConsoleKey.Q:
+                case ConsoleKey.A:
+                case ConsoleKey.LeftArrow:
                     newDirection = DirectionEnum.Left;
                     break;
 
                 case ConsoleKey.S:
+                case ConsoleKey.DownArrow:
                     newDirection = DirectionEnum.Down;
                     break;
 
                 case ConsoleKey.D:
+                case ConsoleKey.RightArrow:
                     newDirection = DirectionEnum.Right;
                     break;
 
@@ -74,20 +80,21 @@ namespace Snake
 
             // If the snake's head moves to the same position as an apple, the snake
             // eats it.
-            if (_snake.Head.Equals(_apple.Position))
+            if (_snake.HeadPosition.Equals(_apple.Position))
             {
-                _snake.Grow();
-                _apple = new Heart(numberOfRows, numberOfColumns);
+                /*
+                 * ... Something is missing here 
+                 */
             }
         }
 
         public void Render()
         {
-            //Clear the console, 
+            // Clear the console, 
             // Render the snake and the apple
-            Console.Clear();
-            _snake.Render();
-            _apple.Render();
+            /*
+             * ... Something is missing here 
+             */
 
             // Replace the cursor to the top, so he dont block us.
             Console.SetCursorPosition(0, 0);
